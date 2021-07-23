@@ -1,0 +1,5 @@
+1. run policy sync mock srv
+    go run ./cmd/policysync
+
+2. run dikastes, dial to the above ps server
+    go run ./cmd/dikastes server --listen /tmp/dikastes.sock --dial /tmp/policysync.sock
